@@ -7,7 +7,7 @@ export const UsersTable = pgTable("users", {
   id: varchar().primaryKey(),
   email: varchar().notNull().unique(),
   name: varchar().notNull(),
-  imageUrl: varchar(),
+  imageUrl: varchar().notNull(),
   createdAt: createdAt,
   updatedAt: updatedAt,
 });
