@@ -1,3 +1,5 @@
+@layer theme, base, vendor, components, utilities;
+
 @import "tailwindcss";
 @import "tw-animate-css";
 
@@ -37,7 +39,7 @@
   --color-popover: var(--popover);
   --color-card-foreground: var(--card-foreground);
   --color-card: var(--card);
-  --color-warning: var(var(--warning));
+  --color-warning: var(--warning);
   --color-warning-foreground: var(--warning-foreground);
   --radius-sm: calc(var(--radius) - 4px);
   --radius-md: calc(var(--radius) - 2px);
@@ -210,4 +212,12 @@
   margin-inline: auto;
   padding-inline: 2rem;
   max-width: 96rem;
+}
+
+.custom-pricing-table.cl-pricingTableCard__basic {
+  @apply border-primary/50 m-0 py-9 relative overflow-visible;
+  &::before {
+    content: "Most Popular";
+    @apply absolute top-0 left-1/2 -translate-1/2 rounded-full px-4 py-1 text-sm text-primary-foreground bg-primary;
+  }
 }
